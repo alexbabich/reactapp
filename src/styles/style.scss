@@ -1,0 +1,54 @@
+@import "_media.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.tm-filmList {
+
+}
+
+.tm-filmItem {
+  position: relative;
+  min-height: 335px;
+  &:hover {
+    box-shadow: 0 0 10px 0 #d0d0d0;
+    .tm-overview {
+      max-height: 184px;
+    }
+  }
+  .tm-title {
+
+  }
+  .tm-overview {
+    height: auto;
+    max-height: 100px;
+    overflow: hidden;
+  }
+  .tm-poster {
+    display: inline-block;
+  }
+  .tm-description {
+    display: inline-block;
+    width: calc(100% - 230px);
+    text-align: left;
+    margin-left: 20px;
+    vertical-align: top;
+  }
+}
+
+nav {
+  padding: 30px 0;
+  a {
+    &.active,
+    &:hover {
+      color: red;
+    }
+  }
+}

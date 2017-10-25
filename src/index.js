@@ -1,9 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+
 import 'bootstrap/dist/css/bootstrap.css';
-import './style.scss';
-import App from './App';
+import './styles/style.css';
+import App from './containers/App';
+
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const app = document.getElementById('root');
+
+const Menu = () => (
+    <BrowserRouter>
+        <App />
+    </BrowserRouter>
+)
+
+ReactDOM.render(<Menu />, app);
+
 registerServiceWorker();
