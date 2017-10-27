@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {apiLink} from "./../api";
 
-class App extends Component {
+class Films extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            kind: '',
             data: []
         };
     }
@@ -14,7 +13,7 @@ class App extends Component {
     componentDidMount() {
         apiLink('primary_release_year=2018&sort_by=vote_average.desc&sort_by=vote_count.desc')
             .then(({ data })=> {
-                console.log(data);
+                // console.log(data);
                 this.setState({
                     data: data.results
                 });
@@ -48,4 +47,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default Films;

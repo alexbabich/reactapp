@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {apiLink} from "./../api";
 
-class App extends Component {
+class StartPage extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            kind: '',
             data: []
         };
     }
@@ -46,4 +45,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default StartPage;

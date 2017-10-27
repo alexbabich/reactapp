@@ -1,27 +1,56 @@
 import React, { Component } from 'react';
-import {actor} from "./../api";
+// import {actor} from "./../api";
+// import SearchInput, {createFilter} from 'react-search-input'
 
-class App extends Component {
-    constructor(props) {
+
+class ActorsSearch extends Component {
+    constructor({props, onsearch}) {
         super(props);
 
         this.state = {
-            kind: '',
-            data: []
+            data: [],
+            searchTerm: '',
+            checked: onsearch
         };
+
+        // this.searchUpdated = this.searchUpdated.bind(this);
     }
 
     componentDidMount() {
-        /*actor({text})
-            .then(({ data })=> {
-                console.log(data);
-                this.setState({
-                    data: data.results
-                });
-            })*/
+        // actor(Object.values({searhText}))
+        //     .then(({ data })=> {
+        //         this.setState({
+        //             listActors: data.results
+        //         })
+        //     });
+        console.log(this.props)
     }
 
-    render() {
+    render () {
+        // const filteredEmails = actor().filter(createFilter(this.state.searchTerm, KEYS_TO_FILTERS))
+
+        return (
+            <div>
+                {/*<SearchInput className="search-input" onChange={this.searchUpdated} />
+                {filteredEmails.map(email => {
+                    return (
+                        <div className="mail" key={email.id}>
+                            <div className="from">{email.user.name}</div>
+                            <div className="subject">{email.subject}</div>
+                        </div>
+                    )
+                })}*/}
+
+                <p></p>
+            </div>
+        )
+    }
+
+    // searchUpdated (term) {
+    //     this.setState({searchTerm: term})
+    // }
+
+    /*render() {
         const child = this.state.data.map((el, index) => {
             return (
                 <div key={index} className="col-xs-12 col-md-6 col-lg-4">
@@ -46,7 +75,7 @@ class App extends Component {
                 </div>
             </div>
         );
-    }
+    }*/
 }
 
-export default App;
+export default ActorsSearch;
